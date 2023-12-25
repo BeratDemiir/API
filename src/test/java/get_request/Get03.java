@@ -1,7 +1,12 @@
+package get_request;
+
+import base_url.JsonPlaceHolderBaseUrl;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
 public class Get03 extends JsonPlaceHolderBaseUrl {
 
@@ -34,8 +39,26 @@ public class Get03 extends JsonPlaceHolderBaseUrl {
         // Send the request and Get Response
 
         Response response=given().spec(spec).when().get("/{first}/{second}");
-        response.prettyPrint();
+        //response.prettyPrint();
 
         // Do Assertion
+
+        // 1. Yol ( Hard Assert)
+        response.then().
+                assertThat().
+                statusCode(200).
+                contentType("application/json").
+                body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit")).
+                body("completed",equalTo(false)).
+                body("userId",equalTo(2));
+
+        // 2. Yol Sadece body içerisinde geçerli bir (Soft Assert)
+
+        response.then().
+                assertThat().
+                statusCode(200).
+                contentType(ContentType.JSON).
+                body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"),
+                        "completed",equalTo(false),"userId",equalTo(2));
     }
 }
