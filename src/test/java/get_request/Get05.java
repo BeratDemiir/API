@@ -1,7 +1,12 @@
 package get_request;
 
 import base_url.RestFulBaseUrl;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+import static org.junit.Assert.*;
+
 
 public class Get05 extends RestFulBaseUrl {
 
@@ -19,14 +24,19 @@ public class Get05 extends RestFulBaseUrl {
     @Test
     public void get01(){
 
+        // https://restful-booker.herokuapp.com/booking?firstname=Berat&lastname=Demir
         // 1. Set The Url
-       spec.pathParams("first","booking");
+       spec.pathParams("first","booking").queryParams("firstname","Berat","lastname","Demir");
 
         // 2. Set The Excepted Data
 
         // 3. Send The Request And Get The Response
+        Response response = given().spec(spec).when().get("/{first}");
+        response.prettyPrint();
 
-
+        // 4. Do Assertion
+        assertEquals(200,response.getStatusCode());
+        assertTrue(response.asString().contains("bookingid"));
 
     }
 }
