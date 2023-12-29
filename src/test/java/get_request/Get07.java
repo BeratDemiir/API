@@ -1,18 +1,19 @@
 package get_request;
 
-import base_url.JsonPlaceHolderBaseUrl;
+import base_url.JsonplaceholderBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.*;
-import static org.junit.Assert.*;
+import static junit.framework.TestCase.*;
 
-public class Get07 extends JsonPlaceHolderBaseUrl {
 
-     /*
+public class Get07 extends JsonplaceholderBaseUrl {
+
+    /*
         Given
               https://jsonplaceholder.typicode.com/todos
       When
@@ -31,23 +32,23 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
     @Test
     public void get01(){
 
-        // Set The Url
-        spec.pathParams("first","todos");
+        // 1. Set The Url
+        spec.pathParam("first","todos");
 
-        // Set The Expected Data
+        // 2. Set The Expected Data
 
-        // Send The Request And Get The Response
-        Response response = given().spec(spec).when().get("/{first}");
+        // 3. Send The Request And Get The Response
+        Response response=given().spec(spec).when().get("/{first}");
+        response.prettyPrint();
 
         // 4. Do Assertion
 
         //  1)Status code is 200 == > Status kodu 200 olmali
-        response.then().assertThat().statusCode(200);
+        response.then().statusCode(200);
         assertEquals(200,response.getStatusCode());
 
         //2)Print all ids greater than 190 on the console ==> id si 190 dan buyuk olanlari konsola yazdirin
         JsonPath json=response.jsonPath();
-
         List<Integer> idler=json.getList("findAll{it.id>190}.id"); // Groovy Language = Java Temelli programlama Dili
         System.out.println("Id'si 190 dan Buyuk Olanlar :"+idler);
 
@@ -72,5 +73,8 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
 
         assertTrue("Id'si 5 den Kucuk Olan Title'lardan herhangi bir tanesi delectus aut autem icermemektedir.",
                 titles.stream().anyMatch(t->t.equals("delectus aut autem")));
+
     }
+
+
 }
