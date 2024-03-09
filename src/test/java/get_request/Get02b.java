@@ -29,6 +29,7 @@ public class Get02b extends ReqresBaseUrl {
 
         //i) Set the URL,
         spec.pathParams("first", "users", "second",23);
+
         //ii)Set the expected Data (beklenen datanin olusturulmasi,Post ,Put ,Patch)
 
         // iii)Type code to send request(Talep göndermek icin kod yazimi

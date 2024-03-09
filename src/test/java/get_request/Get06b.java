@@ -45,6 +45,7 @@ public class Get06b extends ReqresBaseUrl {
        Response response = given().spec(spec).when().get("/{first}");
        response.prettyPrint();
 
+
         //Do assert
         // 1)Status code is 200
         assertEquals(200, response.statusCode());
@@ -68,7 +69,5 @@ public class Get06b extends ReqresBaseUrl {
 
         //Assert that the number of names whose ids are less than 3 is 2
         assertEquals(2, names.size());
-
-
     }
 }
