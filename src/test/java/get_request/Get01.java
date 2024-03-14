@@ -51,7 +51,8 @@ public class Get01 {
         // Bizden post, put ya da patch istenmedigi icin bu case de kullanmayacagiz.
         // iii) Type code to send request ( Talep gondermek icin kod yazimi)
         Response response = given().when().get(url);
-        response.prettyPrint();
+        response.prettyPrint(); // responsedeki body yazdirir.
+      //  response.prettyPeek(); // response deki hersi yazdirir.
 
         // iv) Do Assertion (dogrulama yapmak)
 
@@ -75,6 +76,5 @@ public class Get01 {
         // Time konsola yazdiralim
 
         System.out.println("Time : "+response.getTime());
-
     }
 }
