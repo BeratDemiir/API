@@ -58,7 +58,8 @@ public class Get11 extends GoRestBaseUrl {
                 body("meta.pagination.limit", equalTo(10),
                         "meta.pagination.links.current", equalTo("https://gorest.co.in/public/v1/users?page=1"),
                         "data", hasSize(10),
-                        "data.status", hasItem("active"), "data.name", hasItems("Pres. Amarnath Dhawan", "Sujata Chaturvedi", "Navin Panicker"));
+                        "data.status", hasItem("active"),
+                        "data.name", hasItems("Pres. Amarnath Dhawan", "Sujata Chaturvedi", "Navin Panicker"));
 
         //Kadin Ve Erkek Sayilarini Karsilastiralim
         //1.YOL : java Forloop ile
@@ -81,7 +82,5 @@ public class Get11 extends GoRestBaseUrl {
         List<String> maleGender = response.jsonPath().getList("data.findAll{it.gender=='male'}.name");
         System.out.println(maleGender);
         assertTrue(femaleGender.size()<maleGender.size());
-
-
     }
 }

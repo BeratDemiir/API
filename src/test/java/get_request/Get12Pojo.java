@@ -67,7 +67,5 @@ And
         //2.Yol ===>tavsiye edilen
         assertEquals(bookingDatesPojo.getCheckin(), actualData.getBookingdates().getCheckin());
         assertEquals(bookingDatesPojo.getCheckout(), actualData.getBookingdates().getCheckout());
-
-
     }
 }
