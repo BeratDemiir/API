@@ -29,12 +29,6 @@ public class Odev01 extends AutomationExerciseBaseUrl {
            There must be 12 Women, 9 Men, 13 Kids usertype in products
         */
 
-    //set the Url
-    //Set the Expected Data
-    //send tehe request and Get the Response
-    //Do assert
-
-
     @Test
     public void get01() {
 
