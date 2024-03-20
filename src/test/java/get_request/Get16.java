@@ -24,8 +24,6 @@ public class Get16 extends DummyRestApiBaseUrl {
                     v) The name of the lowest age is "Tatyana Fitzpatrick"
                    vi) Total salary of all employees is 6,644,770
         */
-
-
     @Test
     public void get16() {
 
@@ -76,6 +74,5 @@ public class Get16 extends DummyRestApiBaseUrl {
         int sum3 = Salarys.stream().reduce(0, Math::addExact);
         System.out.println("sum3 = " + sum3);
         assertEquals(6644770, sum3);
-
     }
 }
