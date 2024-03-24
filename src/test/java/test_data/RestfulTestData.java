@@ -25,6 +25,5 @@ public class RestfulTestData {
         expectedDataMap.put("bookingdates",bookingdates);
 
         return expectedDataMap;
-
     }
 }

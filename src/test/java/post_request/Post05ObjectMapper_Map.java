@@ -73,6 +73,5 @@ public class Post05ObjectMapper_Map extends JsonplaceholderBaseUrl {
         assertEquals(expectedData.get("userId"),actualData.get("userId"));
 
         System.out.println("(ObjectMapperUtils.convertJsonToJava(\"15\",Integer.class)+45) = " + (ObjectMapperUtils.convertJsonToJava("15", Integer.class) + 45));
-
     }
 }
