@@ -27,8 +27,6 @@ public class ObjectMapperUtils {
 
             throw new RuntimeException(e);
         }
-
         return javaResult;
-
     }
 }

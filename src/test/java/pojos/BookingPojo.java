@@ -19,8 +19,6 @@ public class BookingPojo {
         this.depositpaid = depositpaid;
         this.bookingdates = bookingdates;
         this.additionalneeds = additionalneeds;
-
-
     }
 
     public BookingPojo() {
