@@ -50,10 +50,9 @@ Then
 
 
         //Do Assertion
-        Map<String,Object> actualData = response.as(HashMap.class);
+        Map<String, Object> actualData = response.as(HashMap.class);
 
-        assertEquals(200,response.getStatusCode());
+        assertEquals(200, response.getStatusCode());
         assertEquals(expectedData.get("title"), actualData.get("title"));
     }
-
 }
