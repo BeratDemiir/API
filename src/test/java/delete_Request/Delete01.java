@@ -22,7 +22,6 @@ public class Delete01 extends JsonplaceholderBaseUrl {
          Status code is 200
          And Response body is { }
      */
-
     @Test
     public void delete01(){
         //Set the Url
@@ -47,6 +46,5 @@ public class Delete01 extends JsonplaceholderBaseUrl {
 
         //3. Yol
         assertEquals(0,actualData.size());
-
     }
 }

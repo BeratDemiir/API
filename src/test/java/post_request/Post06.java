@@ -101,8 +101,5 @@ public class Post06 extends DummyRestApiBaseUrl {
         softAssert.assertEquals(actualData.getData().getEmployee_image(),expectedData.getEmployee_image());
 
         softAssert.assertAll();
-
     }
-
-
 }
