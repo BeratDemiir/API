@@ -16,8 +16,6 @@ public class ReqresTestData {
       if (job!=null){
           expectedData.put("job",job);
       }
-
-
       return expectedData;
   }
 }
