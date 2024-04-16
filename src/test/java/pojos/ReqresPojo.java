@@ -12,7 +12,6 @@ public class ReqresPojo {
         this.name = name;
         this.job = job;
     }
-
     public ReqresPojo() {
     }
 
