@@ -60,8 +60,5 @@ public class Odev02_PostMap extends ReqresBaseUrl {
 
         assertEquals(expectedData.get("name"), actualData.get("name"));
         assertEquals(expectedData.get("job"), actualData.get("job"));
-
-
     }
-
 }
