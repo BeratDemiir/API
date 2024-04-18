@@ -59,5 +59,4 @@ public class Odev02_PostPojo extends ReqresBaseUrl {
         assertEquals(expectedData.getJob(),actualData.getJob());
 
     }
-
 }
