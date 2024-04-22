@@ -54,13 +54,11 @@ public class Odev03_PutMap extends ReqresBaseUrl {
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().put("/{first}/{second}");
         response.prettyPrint();
 
-
         //Do assert
         Map<String, Object> actualData = response.as(Map.class);
         System.out.println("actualData = " + actualData);
 
         assertEquals(expectedData.get("name"),actualData.get("name"));
         assertEquals(expectedData.get("job"),actualData.get("job"));
-
     }
 }
