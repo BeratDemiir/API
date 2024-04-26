@@ -25,6 +25,4 @@ public class GoRestTestData {
 
         return expectedData;
     }
-
-
 }

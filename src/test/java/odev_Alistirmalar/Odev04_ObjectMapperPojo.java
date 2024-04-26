@@ -55,5 +55,4 @@ public class Odev04_ObjectMapperPojo extends ReqresBaseUrl {
 
         assertEquals(expectedData.getName(), actualData.getName());
     }
-
 }
