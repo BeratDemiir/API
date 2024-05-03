@@ -11,7 +11,6 @@ public class BookingDatesPojo {
 
     //2-Tum parametrelerle ve parametresiz constructor lar olusturduk
 
-
     public BookingDatesPojo(String checkin, String checkout) {
         this.checkin = checkin;
         this.checkout = checkout;
@@ -21,7 +20,6 @@ public class BookingDatesPojo {
     }
 
     //3-Public Getter ve Setter methodlarini olusturduk
-
 
     public String getCheckin() {
 
@@ -45,7 +43,6 @@ public class BookingDatesPojo {
     }
 
     //4-To String methodunu olusturuyoruz
-
     @Override
     public String toString() {
         return "BookingDatesPojo{" +
