@@ -35,7 +35,6 @@ Then
     @Test
     public void patch01() {
 
-
         //set the url
         spec.pathParams("first", "todos", "second", 198);
 
@@ -47,7 +46,6 @@ Then
         //send the Request and Get the Response
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().patch("/{first}/{second}");
         response.prettyPrint();
-
 
         //Do Assertion
         Map<String, Object> actualData = response.as(HashMap.class);
